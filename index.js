@@ -18,6 +18,10 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 15;
+// well I'm not returning a value though; Not sure what 'return' means exactly here; I assume it means print
+console.log(votingAge>=18)
+
 
 
 /*
@@ -30,6 +34,13 @@ Do the following:
 
    HINT: no function required
 */
+
+let v1 = 2;
+let v2 = 3;
+
+if(v2<5){ v1 = 4 }
+console.log(v1);
+
 
 
 
@@ -46,6 +57,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let testString = "1999";
+console.log(Number(testString))
+
 
 
 
@@ -58,10 +72,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+function multiply(a,b){
+  return a*b;
+}
 
+console.log(multiply(3,5))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +89,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+    return humanYears * 7;
 }
-
+console.log(dogYears(5))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +122,33 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
-  }
+function hungryDog(weight,age){
+    if(age <= 0 || weight <= 0){
+      return 0;
+    }
+    if(age>=1){
+      if(weight<=5){
+        return weight*0.05
+      } else if(weight<=10) {
+        return weight*0.04
+      } else if(weight<=15) {
+        return weight*0.03
+      } else {
+        return weight*0.02
+      }
+    } else {
+      if(age<4/12){
+        return weight*0.1;
+      } else if(age<7/12) {
+        return weight*0.5
+
+      } else {
+        return weight * 0.4
+      }
+    }
+}
+
+hungryDog(15,1)
 
 
 
@@ -200,25 +239,12 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(num){
-    if(num < 100 && num >= 90){
-      return 'you got an A';
-    }else if(num <90 && num >= 80){
-      return 'you got a B';
-    }else if(num < 80 && num >= 70){
-      return 'you got a C';
-    }else if(num < 70 && num >= 60){
-      return 'you got a D';
-    }else if(num < 60){
-      return 'you got an F';
-    }
-  }
-  
-  console.log('grade function', grade(85));
-  
-  
 
+function grade(/*Your Code here */){
+  /*Your Code here */
+  }
+
+  
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
