@@ -148,7 +148,7 @@ function hungryDog(weight,age){
     }
 }
 
-hungryDog(15,1)
+console.log(hungryDog(15,1))
 
 
 
@@ -173,9 +173,22 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+
+var rand = Math.random()
+var opponent = ((a) => {
+  if(a<1/3){return 'rock'}
+  if(a<2/3){return 'paper'}
+  else{return 'scissors'} })(rand)
+
 function game(user, computer){
-    /*add your code here*/
+  if(user===computer){return "it's a tie"}
+  let winning = ['rockscissors','scissorspaper','paperrock'];
+  if(winning.includes(user+computer)){return 'you win!'}
+  return 'you lose!'
 }
+
+console.log(game('paper', opponent))
+
   
   
 
@@ -190,9 +203,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+    return km*0.621371;
+}
 
 
 
@@ -204,9 +217,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(cm){
+    return cm/30.48;
+}
  
 
 
@@ -220,9 +233,9 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+function annoyingSong(number){
+    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number-1} bottles of soda on the wall`
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -240,11 +253,23 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+    if(score>=90){
+      return 'you got an A'
+    }
+    if(score>=80){
+      return 'you got a B'
+    }
+    if(score>=70){
+      return 'you got a C'
+    }
+    if(score>=60){
+      return 'you got a D'
+    }
+    return 'you got an F'
   }
 
-  
+
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
 //Vowel Counter - How many vowels are there?
@@ -258,8 +283,8 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter() {
+    
 }
 
 
